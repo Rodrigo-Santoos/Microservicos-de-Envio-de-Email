@@ -10,7 +10,7 @@
 
 ```
 - Ter o Java 11 ou superior instalado
-- Ter o Mysql instalado (Caso nao queira usar o mysql tera que baixa a dependencia do seu -
+- Ter o Mysql instalado (Caso não queira usar o mysql terá que baixar a dependência do seu -
   banco de dados desejado e coloca no POM.xml) 
 - IDE de sua preferência: Eclipse | Intellij IDE | SpringToolSuite4
 ```
