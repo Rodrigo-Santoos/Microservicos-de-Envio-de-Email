@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-public class EmailDto { // metodo recenbendo entrada no metodo post
+public class EmailDto { // metodo recenbendo entrada no metodo post 
 
     @NotBlank  //se estiver faltando algum campo vai mostrar para o usuario que determinado campo é obrigatorio
     private String ownerRef; // referencia ao do proprietario (pela ID dele)

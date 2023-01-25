@@ -23,10 +23,11 @@ public class EmailService {
     //=======================================================
     //metodos
 
-    //Salvamento e envio de email
+    //Metodo de Salvamento e envio de email
     public EmailModel sendEmail(EmailModel emailModel) {
         emailModel.setSendDateEmail(LocalDateTime.now()); // enviado a data de email de agora
         try {
+            //montando a mensangem do email para enviar
             SimpleMailMessage message = new SimpleMailMessage();
             message.setFrom(emailModel.getEmailFrom());
             message.setTo(emailModel.getEmailTo());

@@ -18,11 +18,12 @@ public class EmailController {
     @Autowired
     EmailService emailService;
 
+    //metodo de envio de email
     @PostMapping("/sending-email")
-    public ResponseEntity<EmailModel> sendingEmail(@RequestBody @Valid EmailDto emailDto){
-        EmailModel emailModel = new EmailModel();
-        BeanUtils.copyProperties(emailDto, emailModel);
-        emailService.sendEmail(emailModel);
+    public ResponseEntity<EmailModel> sendingEmail(@RequestBody @Valid EmailDto emailDto){ //validaçao do campos
+        EmailModel emailModel = new EmailModel(); // instanciando a classe EmailModel
+        BeanUtils.copyProperties(emailDto, emailModel); // convertendo de dto para model
+        emailService.sendEmail(emailModel); // enviando a conversao de dto para model para o metodo quanto de salvamento e envio de email(EmailService)
         return new ResponseEntity<>(emailModel, HttpStatus.CREATED);
     }
 }
